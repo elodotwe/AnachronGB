@@ -21,11 +21,11 @@ Public Function SetHighByte(value As Long, newByte As Byte) As Long
     SetHighByte = result
 End Function
 
-Public Function LShift(value As Long, n As Integer)
+Public Function LShift(value, n As Integer)
     LShift = value * 2& ^ n
 End Function
 
-Public Function RShift(value As Long, n As Integer)
+Public Function RShift(value, n As Integer)
     ' \ instead of / means integer division
     RShift = value \ 2& ^ n
 End Function

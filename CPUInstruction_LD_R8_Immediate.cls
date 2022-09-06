@@ -6,21 +6,23 @@ BEGIN
   DataSourceBehavior  = 0  'vbNone
   MTSTransactionMode  = 0  'NotAnMTSObject
 END
-Attribute VB_Name = "CPUInstruction_LD_R8_R8"
+Attribute VB_Name = "CPUInstruction_LD_R8_Immediate"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
+
 Implements CPUInstruction
 
-Public sourceReg As CPURegister8
+Public sourceValue As Byte
 Public destReg As CPURegister8
 
 Public Property Get CPUInstruction_DebugDescription() As String
-    CPUInstruction_DebugDescription = "LD " + register8Name(destReg) + "," + register8Name(sourceReg)
+    CPUInstruction_DebugDescription = "LD " + register8Name(destReg) + "," + sourceValue
 End Property
 
 Public Property Get CPUInstruction_OpcodeLength() As Integer
-    CPUInstruction_OpcodeLength = 1
+    CPUInstruction_OpcodeLength = 2
 End Property
+

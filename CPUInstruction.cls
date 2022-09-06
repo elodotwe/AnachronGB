@@ -17,3 +17,7 @@ Option Explicit
 Public Property Get DebugDescription() As String
 
 End Property
+
+Public Property Get OpcodeLength() As Integer
+
+End Property
